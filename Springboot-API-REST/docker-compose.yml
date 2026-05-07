@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  back-ventas:
+    build: .
+    container_name: back-ventas-container
+    ports:
+      - "8080:8080"
+    environment:
+      # AQUÍ debes poner la IP Privada de tu instancia de Base de Datos de la EP1
+      - DB_ENDPOINT=TU_IP_PRIVADA_DB  
+      - DB_PORT=3306
+    restart: always
+
+# Definición de volúmenes para cumplir con la Persistencia (IE3)
+volumes:
+  db-data:
+    driver: local

@@ -1,0 +1,7 @@
+target/
+*.class
+.git
+.gitignore
+.vscode/
+Dockerfile
+docker-compose.yml
